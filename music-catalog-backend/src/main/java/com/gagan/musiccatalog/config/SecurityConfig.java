@@ -39,7 +39,7 @@ public class SecurityConfig {
 
         configuration.setAllowedOriginPatterns(List.of(
                 "http://localhost:5173",
-                "https://*.vercel.app"
+                "https://music-catalog-mu.vercel.app/"
         ));
 
         configuration.setAllowedMethods(List.of(
