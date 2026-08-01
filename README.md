@@ -13,27 +13,27 @@ Developed as part of the Ledger CFO Take-Home Assignment, this project includes 
 
 ## Dashboard
 
-![Dashboard](image\Dashboard.png)
+![Dashboard](image/Dashboard.png)
 
-![Dashboard](image\Dashboard1.png)
+![Dashboard](image/Dashboard1.png)
 
 ---
 
 ## My Library
 
-![Library](image\MyLibrary.png)
+![Library](image/MyLibrary.png)
 
 ---
 
 ## Analytics
 
-![Analytics](image\Analytics.png)
+![Analytics](image/Analytics.png)
 
 ---
 
 ## AI Music Recommendations
 
-![AI Recommendations](image\AIMusicRecommendations.png)
+![AI Recommendations](image/AIMusicRecommendations.png)
 
 
 ## 📖 Project overview
