@@ -1,5 +1,6 @@
 import { X } from "lucide-react";
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 
 function Modal({ isOpen, onClose, title, children, footer }) {
   // Close on Escape key
@@ -12,13 +13,16 @@ function Modal({ isOpen, onClose, title, children, footer }) {
 
   // Prevent body scroll when modal open
   useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    if (!isOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = previousOverflow; };
   }, [isOpen]);
 
   if (!isOpen) return null;
 
-  return (
+  return createPortal(
     <div
       className="modal-overlay"
       onClick={(e) => e.target === e.currentTarget && onClose()}
@@ -26,7 +30,7 @@ function Modal({ isOpen, onClose, title, children, footer }) {
       aria-modal="true"
       aria-labelledby="modal-title"
     >
-      <div className="modal-box glass-card">
+      <div className="modal-content modal-box glass-card">
         <div className="modal-header">
           <h3 className="modal-title" id="modal-title">{title}</h3>
           <button
@@ -41,6 +45,8 @@ function Modal({ isOpen, onClose, title, children, footer }) {
         {footer && <div className="modal-footer">{footer}</div>}
       </div>
     </div>
+    ,
+    document.body
   );
 }
 
