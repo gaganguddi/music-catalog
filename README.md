@@ -9,6 +9,23 @@ Developed as part of the Ledger CFO Take-Home Assignment, this project includes 
 - Frontend: https://music-catalog-mu.vercel.app
 - Backend API: https://music-catalog-154o.onrender.com
 - Repository: https://github.com/gaganguddi/music-catalog
+
+# 🚨 Important
+
+- **Demo Login**
+  - Email: `test@gmail.com`
+  - Password: `123456`
+
+- **Database**
+  - This project uses **FreeDB** (7-day free database). The database may expire after 7 days and require recreation.
+
+- **Backend**
+  - Hosted on **Render Free Tier**.
+  - A **Google Apps Script trigger** periodically pings the backend to help reduce cold starts while the demo is available.
+
+- **Live Demo**
+  - Frontend: https://music-catalog-mu.vercel.app
+  - Backend: https://music-catalog-154o.onrender.com
  
 
 ## Dashboard
